@@ -5,7 +5,7 @@
 #give credit. Thank you.
 #Hashing algorithm was made from reading 
 #http://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html
-#Questions? email: ankenyr@gmail.com
+#Questions?? email: ankenyr@gmail.com
 import wx
 import os
 import glob
