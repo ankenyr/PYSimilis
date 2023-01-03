@@ -120,8 +120,6 @@ class Imager(wx.App):
           (725,self.img_height+50), style=wx.TE_READONLY)
         self.file2_size = wx.TextCtrl(self.panel, -1, 'size',
           (725,self.img_height+75), style=wx.TE_READONLY)
-        #self.file2_size.Clear()
-        #self.file2_size.write('test')
 
     def CreatePictures(self):
         blankimg = wx.EmptyBitmap(self.img_width,self.img_height)
@@ -143,7 +141,7 @@ class Imager(wx.App):
         
         files = []
         for f in os.listdir(self.path):
-            print f
+            print(f)
             if os.path.splitext(f)[1].lower() in ('.jpg', '.jpeg',
                                                   '.bmp', '.png', '.gif'):
                 files.append(f)
@@ -166,7 +164,7 @@ class Imager(wx.App):
             #print file1+' '+file2
             #print diffs
             if diffs<=20:
-                print 'found'
+                print('found')
                 self.img_array.append((file1, file2))
             if time() - timer > 10:
                 wx.SafeYield()           
@@ -223,9 +221,9 @@ class Imager(wx.App):
         for item in self.delete_list:
             try:
                 os.remove(self.path+'\\'+item)
-                print 'deleting file '+item
-            except WindowsError:
-                print 'No Files to delete'
+                print('deleting file '+item)
+            except:
+                print('No Files to delete')
         self.delete_list = []
         
 if __name__ == '__main__':
