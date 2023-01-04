@@ -23,7 +23,6 @@ jobs:
       - name: deps
         run: |
           python -m pip install -U build
-          python -m pip install -U sigstore
 
       - name: build
         run: python -m build
@@ -39,6 +38,7 @@ jobs:
             dist_base="$(basename "${dist}")"
 
             python -m venv smoketest-env
+            python -m pip install -U sigstore
 
             ./smoketest-env/bin/python -m pip install "${dist}"
 
