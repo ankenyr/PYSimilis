@@ -10,6 +10,7 @@ packages = [{include = "pysimilis"}]
 pysimilis = "pysimilis.main:EntryPoint"
 [tool.poetry.dependencies]
 python = "^3.10"
+sigstore = "^0.9.0"
 
 
 [build-system]
