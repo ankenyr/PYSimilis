@@ -21,7 +21,7 @@ jobs:
           python-version: "3.x"
 
       - name: deps
-        run: python -m pip install -U build
+        run: python -m pip install -U build sigstore
 
       - name: build
         run: python -m build
