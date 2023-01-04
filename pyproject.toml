@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pysimilis"
+version = "0.1.0"
+description = ""
+authors = ["Rob Ankeny <ankenyr@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pysimilis"}]
+
+[tool.poetry.scripts]
+pysimilis = "pysimilis.main:EntryPoint"
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
