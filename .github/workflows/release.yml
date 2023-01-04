@@ -27,7 +27,7 @@ jobs:
       - name: build
         run: python -m build
       - name: sign
-      - uses: sigstore/gh-action-sigstore-python@v0.2.0
+        uses: sigstore/gh-action-sigstore-python@v0.2.0
         with:
           inputs: dist/*
 
